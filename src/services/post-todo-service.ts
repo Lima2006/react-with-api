@@ -7,7 +7,7 @@ type postTodoServiceProps = (
 ) => Promise<postTodoServiceResponse>;
 
 const postTodoService: postTodoServiceProps = async (data) =>
-  fetch("https://my-json-server.typicode.com/juanzitown/react-with-api/todos", {
+  fetch("http://localhost:3001/todos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

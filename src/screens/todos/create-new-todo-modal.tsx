@@ -9,12 +9,12 @@ import TaskType from "../../types/task-type";
 type CreateNewTodoModalProps = {
   onClose?: () => void;
   open?: boolean;
-  createTodo?: (values: TaskType) => void;
+  onCreateTodo?: (values: TaskType) => void;
 };
 const CreateNewTodoModal = ({
   open = false,
   onClose = () => null,
-  createTodo = () => null,
+  onCreateTodo = () => null,
 }: CreateNewTodoModalProps) => {
   const { getValue, setValue } = useForm({});
   const titleValue = getValue("title");
@@ -33,7 +33,7 @@ const CreateNewTodoModal = ({
             colorScheme="info"
             onClick={() => {
               if (titleValue) {
-                createTodo({ id: "", title: titleValue });
+                onCreateTodo({ id: "", title: titleValue });
                 setValue("title", "");
               }
             }}

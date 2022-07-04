@@ -57,7 +57,7 @@ function TodosScreen({}: TodosScreenProps) {
       <CreateNewTodoModal
         open={showModal}
         onClose={() => setShowModal(false)}
-        createTodo={createTodo}
+        onCreateTodo={createTodo}
       />
 
       <Button colorScheme="primary" onClick={() => setShowModal(true)}>
